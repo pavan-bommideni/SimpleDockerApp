@@ -1,0 +1,17 @@
+Step 1: Login to Docker Hub using your credentials
+Commands:
+	docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+
+Step 2: To build the image , DockerFile has to be executed
+Commands:
+	docker build -f Dockerfile -t $DOCKER_USER_ID/IMAGE_NAME .
+	We can drop -f Dockerfile if we are already in the directory containing the Dockerfile.
+	docker build -t $DOCKER_USER_ID/IMAGE_NAME .
+
+Step 3: Push the image to Docker Hub
+Commands:
+	docker push $DOCKER_USER_ID/IMAGE_NAME
+
+Verify whether image is successfully pushed on to Repo.
+
+Pull image and run the image for running your app in Docker Container.
